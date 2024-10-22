@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+   
         <header><h1 class="protest-strike-regular">Ryans Portfolio</h1></header>
 		 <nav class="navbar">
         <ul class="nav-links">
@@ -25,21 +25,38 @@
         </ul>
     </nav>
        
-    </div>
+    
 	<div class="container">
         <div class="item">
-            <h3>The Farm</h3>
-			
-            <p>image collage</p>
-        </div>
-		<div class="container">
-        <div class="item"><p> My goal is to help meet your digital media needs for work or personal use. This site has my past work on display for purches but i do take </p></div>
-        
+            <h1>HTML Geolocation</h1>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+       
     </div>
+	 </div>
 		
-        
-    </div>
-	
+         <div class="section_L">Just added this additional section here.  This block just appears larger as it has more contents, but its "flex-grow" box is the same as the box on the left.  That is part of the joy of the flexbox.  It will flex to fit your contents.</div>
+  
 	<footer>Copyright Ryan Rodriguez 2024</footer>
 </body>
 </html>
