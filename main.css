@@ -95,3 +95,35 @@ footer{
     border-radius: 8px; /* Rounded corners */
 	column-gap: 70px;
 }
+@media only screen and (max-width: 600px) {
+    /* Flex container */
+    .flex-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    /* Container header */
+    .container-header {
+        padding: 15px;
+        text-align: center; /* Center text in header */
+    }
+
+    /* Navigation bar */
+    .nav-bar {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center links */
+        padding: 10px 0;
+    }
+
+    .nav-bar a {
+        margin: 5px 0; /* Space out links */
+        font-size: 16px; /* Adjust font size */
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px;
+        text-align: center; /* Center text in footer */
+    }
+}
